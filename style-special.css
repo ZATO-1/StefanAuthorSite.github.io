@@ -1,0 +1,124 @@
+/* ===== special project page (digital-book vibe) ===== */
+body.special{
+  --gold: #caa661;
+  --bg: #0b0b0b;
+  --text: #e6e6e6;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+}
+
+/* close button */
+.close-x{
+  position: fixed; right: 16px; top: 12px;
+  width: 36px; height: 36px;
+  display: grid; place-items: center;
+  text-decoration: none;
+  color: var(--text);
+  border: 1px solid #1d1d1d;
+  background: #0e0e0e;
+  font-size: 28px; line-height: 1;
+  z-index: 50;
+}
+.close-x:hover{ background:#111; }
+
+/* frame */
+.special-frame{
+  max-width: 960px;
+  margin: clamp(24px, 6vw, 64px) auto;
+  padding: clamp(18px, 3vw, 28px);
+  position: relative;
+  background: #0b0b0b;
+  border: 1px solid #1d1d1d;
+}
+.special-frame::before,
+.special-frame::after{
+  content:"";
+  position:absolute; inset: 10px;
+  border: 1px solid rgba(202,166,97,0.45);
+  pointer-events:none;
+}
+.special-frame::after{
+  inset: 22px; border-color: rgba(202,166,97,0.20);
+}
+
+/* corners */
+.special-frame .corner{
+  position:absolute; width:22px; height:22px; border:1px solid var(--gold);
+}
+.special-frame .corner.tl{ left:6px; top:6px; border-right:none; border-bottom:none; }
+.special-frame .corner.tr{ right:6px; top:6px; border-left:none; border-bottom:none; }
+.special-frame .corner.bl{ left:6px; bottom:6px; border-right:none; border-top:none; }
+.special-frame .corner.br{ right:6px; bottom:6px; border-left:none; border-top:none; }
+
+/* header */
+.special-head{
+  text-align:center;
+  margin-bottom: clamp(16px, 3vw, 28px);
+}
+.brand-mark{
+  color: var(--gold);
+  font-size: 18px;
+  letter-spacing: 0.4em;
+}
+.special-title{
+  font-size: clamp(30px, 6vw, 56px);
+  line-height: 1.1;
+  margin: 6px 0 0 0;
+  letter-spacing: 0.06em;
+}
+.special-sub{
+  margin: 6px 0 0 0;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+/* hero */
+.special-hero{
+  text-align:center;
+  margin: clamp(10px, 2.5vw, 18px) 0 clamp(14px, 3vw, 24px) 0;
+}
+.special-cover{
+  display:block; margin: 0 auto;
+  max-width: 420px; width: 100%; height: auto;
+  border: 1px solid #1d1d1d;
+  background:#0f0f0f;
+}
+.special-blurb{ color:#d9d9d9; margin: 12px auto 8px; max-width: 60ch; }
+.actions.center{ display:flex; justify-content:center; gap:12px; flex-wrap:wrap; }
+
+/* accent button */
+.button--accent{
+  border-color: var(--gold);
+  color: #fff;
+}
+.button--accent:hover{ background: #111; }
+
+/* body */
+.special-body{
+  max-width: 72ch; margin: 0 auto;
+}
+.special-body h2{
+  font-size: clamp(20px, 3.6vw, 28px);
+  margin: 18px 0 8px;
+  letter-spacing: 0.02em;
+}
+.special-body h3{ margin: 16px 0 6px; }
+.special-body p{ margin: 0 0 1.05em 0; }
+.contents{
+  list-style: square; padding-left: 1.2em; margin: 0 0 1em 0;
+}
+.contents li + li{ margin-top: 4px; }
+
+/* footer */
+.special-foot{
+  text-align:center; color: #9a9a9a;
+  padding: 18px 0 36px;
+}
+
+/* responsive tweak */
+@media (max-width: 520px){
+  .special-frame::after{ display:none; }
+}

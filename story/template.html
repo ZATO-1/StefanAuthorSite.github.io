@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Story Title — Your Name</title>
+  <link rel="stylesheet" href="../style.css">
+  <meta name="description" content="One-sentence blurb for this story.">
+</head>
+<body class="story">
+  <!-- CSS-only hamburger -->
+  <input id="nav-toggle" type="checkbox" hidden>
+  <label class="burger" for="nav-toggle" aria-label="Open menu" title="Menu">
+    <!-- three lines -->
+    <span></span><span></span><span></span>
+  </label>
+
+  <nav class="drawer" aria-label="Story navigation">
+    <div class="drawer__inner">
+      <a class="brand small" href="/">YOUR NAME</a>
+      <ul class="drawer__list">
+        <li><a href="/">Home</a></li>
+        <li><a aria-current="page" href="/stories.html">Stories</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+      <label class="close" for="nav-toggle" aria-label="Close menu">×</label>
+    </div>
+  </nav>
+
+  <main class="reader">
+    <article class="prose" itemscope itemtype="https://schema.org/Article">
+      <header class="story-head">
+        <h1 class="story-title" itemprop="headline">Story Title</h1>
+        <p class="story-meta">
+          <time datetime="2025-10-22" itemprop="datePublished">October 22, 2025</time> · ~1,600 words
+        </p>
+      </header>
+
+      <section class="story-body" itemprop="articleBody">
+        <p>The studio was filled with the rich odour of roses… (your text starts here).</p>
+        <p>Second paragraph. Keep paragraphs short-ish for screen reading.</p>
+        <p><em>Optional italic lines look good for epigraphs.</em></p>
+      </section>
+
+      <footer class="story-foot">
+        <p class="muted">© 2025 Your Name</p>
+      </footer>
+    </article>
+  </main>
+</body>
+</html>
